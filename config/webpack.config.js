@@ -81,9 +81,11 @@ module.exports = function(webpackEnv) {
       isEnvDevelopment && require.resolve('style-loader'),
       isEnvProduction && {
         loader: MiniCssExtractPlugin.loader,
+        // // css is located in `static/css`, use '../../' to locate index.html folder
+        // // in production `paths.publicUrlOrPath` can be a relative path
         options: Object.assign(
           {},
-          shouldUseRelativeAssetPaths ? { publicPath: '../../' } : undefined
+          shouldUseRelativeAssetPaths ? { publicPath: '../../' } : {},
         ),
       },
       {
@@ -389,8 +391,10 @@ module.exports = function(webpackEnv) {
                 // It enables caching results in ./node_modules/.cache/babel-loader/
                 // directory for faster rebuilds.
                 cacheDirectory: true,
-                cacheCompression: isEnvProduction,
-                compact: isEnvProduction,
+                // cacheCompression: isEnvProduction,
+                // compact: isEnvProduction,
+                cacheCompression: false,
+                compact: false,
               },
             },
             // Process any JS outside of the app with Babel.

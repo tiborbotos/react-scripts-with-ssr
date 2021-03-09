@@ -4,6 +4,16 @@ This is a fork of [react-scripts](https://github.com/facebook/create-react-app/t
 
 `react-scripts` is a part of [Create React App](https://github.com/facebook/create-react-app), which can be used with a customized version of `react-scripts`.
 
+## Heads up!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+This version of react-scripts-with-ssr is not able to create proper production build, because node env is set to
+development mode. 
+All the configuration and requirement must be merged with the latest react-scripts from https://github.com/facebook/create-react-app/tree/master/packages/react-scripts
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 ## Getting Started
 
 Install create-react-app:
